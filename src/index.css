@@ -1,13 +1,35 @@
-body {
+/* ul,
+li {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.react-beatiful-dnd-copy ~ li {
+  transform: none !important;
+}
+
+
+
+.react-beatiful-dnd-copy {
+  background: lightblue;
+}
+
+.react-beatiful-dnd-copy ~ [data-rbd-placeholder-context-id] {
+  display: none !important;
+}
+
+.shop {
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+
+.shopping-bag {
+  padding: 10px;
+  border: 1px dashed #777;
+} */
+
+
+.dragging {
+  background: yellow;
 }

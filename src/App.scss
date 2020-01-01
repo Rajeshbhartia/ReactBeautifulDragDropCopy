@@ -1,0 +1,100 @@
+/* Material for Input field  */
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/textfield/mdc-text-field";
+
+
+
+.fw-json-form-wrapper{
+  .fw-json-form-title{
+      margin-top: 12px;
+      margin-left: 20px;
+      margin-bottom: 12px;
+  }
+
+  .fw-json-form-divider{
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.08);
+  }
+  .fw-json-form-subtitle{
+      margin-top: 8px;
+      margin-left: 20px;
+  }
+  .fw-box1{
+      height: 260px;
+      width: 280px;
+      float: left;
+      margin-right: 24px;
+      margin-left: 20px;
+      margin-top: 16px;
+      .fw-box1-title{
+          margin-bottom: 8px;
+      }
+      .fw-single-box-wrapper{
+          .fw-single-box{
+              height: 40px;
+              width: 132px;
+              margin-top: 6px;
+              margin-bottom: 6px;
+              margin-right:6px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
+              float: left;
+              cursor: pointer;
+              background-color: white
+          }
+          .fw-single-box:hover{  
+              box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14);
+          }
+      }
+  }
+  .fw-box2{
+      height: 618px;
+      width: 709px;
+      float: left;
+      padding-top: 16px;
+      padding-left: 16px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
+      
+      .fw-box2-title-wrapper{
+          margin-bottom: 14px;
+          margin-right: 16px;          
+          .fw-box2-preview{
+              float: right;
+              cursor: pointer;
+              color: #4169E1;
+              font-size: 14px;
+          }
+      }
+      .fw-box2-content-wrapper{
+        //  flex: 1;
+         height: 80px;
+         width: 100%;
+        //  border: 1px solid gainsboro;
+          .fw-box2-single-content{
+              width: 205px;
+              float: left;
+              margin-right: 24px;
+              height: 56px;
+              margin-bottom: 16px;
+            //   border: 1px solid rgb(192, 192, 192)
+          }
+      }
+  }
+}
+.fw-mr-12{
+  margin-right: 12px;
+}
+
+
+.fw-background-red{
+    background-color: red
+}
+.fw-background-green{
+    background-color: green
+}
+// .fw-dragging-start{
+//     border: 1px solid 
+// }
