@@ -12,11 +12,12 @@ const COLLECTION = [
     { id: uuid(), label: "Number" }
 ];
 
-// const reorder = (list, startIndex, endIndex) => {
-//   const [removed] = list.splice(startIndex, 1);
-//   list.splice(endIndex, 0, removed);
-//   return list;
-// };
+const reorder = (list, startIndex, endIndex) => {
+    console.log(list, startIndex, endIndex)
+    const [removed] = list.splice(startIndex, 1);
+    list.splice(endIndex, 0, removed);
+    return list;
+};
 
 const copy = (source, destination, droppableSource, droppableDestination) => {
     console.log(source, destination, droppableSource, droppableDestination)
@@ -71,12 +72,21 @@ function ShoppingBag(props) {
             {(provided, snapshot) => (
                 <div ref={provided.innerRef} className="shopping-bag fw-box2-content-wrapper">
                     {props.items.map((item, index) => (
-                        <div
-                            className="fw-box2-single-content"
-                            key={index}
-                        >
-                            <FtText label={item.label} />
-                        </div>
+                        <Draggable key={item.id} draggableId={item.id} index={index}>
+                            {(provided, snapshot) => (
+                                <div
+                                    ref={provided.innerRef}
+                                    {...provided.draggableProps}
+                                    {...provided.dragHandleProps}
+                                    style={provided.draggableProps.style}
+                                    className="fw-box2-single-content"
+                                >
+                                    <FtText label={item.label} />
+                                    {/* {item.label} */}
+                                    {/* <input placeholder="item.label" /> */}
+                                </div>
+                            )}
+                        </Draggable>
                     ))}
                     {provided.placeholder}
                 </div>
@@ -94,41 +104,67 @@ class DragAndDropRBD extends Component {
         shoppingBagItems3: [],
         shoppingBagItems4: [],
     }
-    
+
     onDragEnd = (result) => {
         const { source, destination } = result;
-        console.log(this.state.shoppingBagItems1.length, destination)
+        console.log(source, destination)
 
         let dest = { ...destination }
         dest.index = this.state.shoppingBagItems1.length
 
-        
+
         if (!destination) {
             return;
         }
         console.log(destination)
-        switch (destination.droppableId) {
-            case "BAG1":
-                if (this.state.shoppingBagItems1.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems1, source, dest)
-                break;
+        if (source.droppableId === "SHOP") {
+            switch (destination.droppableId) {
+                case "BAG1":
+                    if (this.state.shoppingBagItems1.length < 3)
+                        copy(COLLECTION, this.state.shoppingBagItems1, source, destination)
+                    break;
 
-            case "BAG2":
-                if (this.state.shoppingBagItems2.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems2, source, dest)
-                break;
+                case "BAG2":
+                    if (this.state.shoppingBagItems2.length < 3)
+                        copy(COLLECTION, this.state.shoppingBagItems2, source, destination)
+                    break;
 
-            case "BAG3":
-                if (this.state.shoppingBagItems3.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems3, source, dest)
-                break;
+                case "BAG3":
+                    if (this.state.shoppingBagItems3.length < 3)
+                        copy(COLLECTION, this.state.shoppingBagItems3, source, destination)
+                    break;
 
-            case "BAG4":
-                if (this.state.shoppingBagItems4.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems4, source, dest)
-                break;
-            default:
-                break;
+                case "BAG4":
+                    if (this.state.shoppingBagItems4.length < 3)
+                        copy(COLLECTION, this.state.shoppingBagItems4, source, destination)
+                    break;
+                default:
+                    break;
+            }
+        } else if (source.droppableId === destination.droppableId) {
+            console.log(source.droppableId, destination)
+            switch (source.droppableId) {
+                case "BAG1":
+                    reorder(this.state.shoppingBagItems1, source.index, destination.index)
+                    break;
+
+                case "BAG2":
+                    reorder(this.state.shoppingBagItems2, source.index, destination.index)
+                    break;
+
+                case "BAG3":
+                    reorder(this.state.shoppingBagItems3, source.index, destination.index)
+                    break;
+
+                case "BAG4":
+                    reorder(this.state.shoppingBagItems4, source.index, destination.index)
+                    break;
+                default:
+                    break;
+            }
+        }else{
+            console.log(source, destination)
+
         }
 
     }
@@ -177,99 +213,3 @@ class DragAndDropRBD extends Component {
 }
 
 export default DragAndDropRBD;
-
-
-
-
-// function App() {
-//     const [shoppingBagItems1, setShoppingBagItems1] = React.useState([]);
-//     const [shoppingBagItems2, setShoppingBagItems2] = React.useState([]);
-//     const [shoppingBagItems3, setShoppingBagItems3] = React.useState([]);
-//     const [shoppingBagItems4, setShoppingBagItems4] = React.useState([]);
-
-//     const onDragEnd = React.useCallback(
-//         result => {
-//             const { source, destination } = result;
-
-//             if (!destination) {
-//                 return;
-//             }
-//             console.log(destination, shoppingBagItems1)
-
-//             switch (destination.droppableId) {
-//                 case "BAG1":
-//                     if (shoppingBagItems1.length < 3)
-//                         setShoppingBagItems1(state =>
-//                             copy(COLLECTION, state, source, destination)
-//                         );
-//                     break;
-//                 case "BAG2":
-//                     setShoppingBagItems2(state =>
-//                         copy(COLLECTION, state, source, destination)
-//                     );
-//                     break;
-//                 case "BAG3":
-//                     setShoppingBagItems3(state =>
-//                         copy(COLLECTION, state, source, destination)
-//                     );
-//                     break;
-//                 case "BAG4":
-//                     setShoppingBagItems4(state =>
-//                         copy(COLLECTION, state, source, destination)
-//                     );
-//                     break;
-//                 default:
-//                     break;
-//             }
-//         },
-//         [setShoppingBagItems1, setShoppingBagItems2, setShoppingBagItems3, setShoppingBagItems4]
-//     );
-
-//     console.log(shoppingBagItems1)
-
-
-//     return (
-
-//         <div className="fw-json-form-wrapper">
-
-//             <DragDropContext onDragEnd={onDragEnd}>
-//                 <div className="fw-json-form-title">
-//                     Form1
-//                 </div>
-//                 <div className="fw-json-form-divider" />
-//                 <div className="fw-json-form-subtitle">
-//                     CRM > Forms
-//                 </div>
-//                 <div className="fw-box1">
-//                     <div className="fw-box1-title">
-//                         Field Types
-//                 </div>
-//                     {/* <div className="fw-single-box-wrapper"> */}
-//                     <Shop items={COLLECTION} />
-//                     {/* </div> */}
-//                 </div>
-
-//                 <div className="fw-box2 mdc-elevation--z6" >
-//                     <div className="fw-box2-title-wrapper">
-//                         <span className="fw-box2-title">
-//                             Selected Fields
-//                         </span>
-//                         <span className="fw-box2-preview" onClick={() => { console.log("preview") }}>
-//                             Preview
-//                         </span>
-//                     </div>
-//                     {/* <div className="fw-box2-content-wrapper"> */}
-//                     <div style={{ display: 'flex', height: "100%", width: "100%", flexDirection: 'column', }}>
-//                         <ShoppingBag items={[{ id: 123, label: "text" }]} id="BAG1" />
-//                         <ShoppingBag items={[{ id: 123, label: "text" }]} id="BAG2" />
-//                         <ShoppingBag items={[{ id: 123, label: "text" }]} id="BAG3" />
-//                         <ShoppingBag items={[{ id: 123, label: "text" }]} id="BAG4" />
-//                     </div>
-//                     {/* </div> */}
-//                 </div>
-//             </DragDropContext>
-//         </div>
-//     );
-// }
-
-// export default App;
