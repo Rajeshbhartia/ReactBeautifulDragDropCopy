@@ -99,7 +99,7 @@ class DragAndDropRBD extends Component {
         console.log(this.state.shoppingBagItems1.length, destination)
 
         let dest = { ...destination }
-        dest.id = this.state.shoppingBagItems1.length
+        dest.index = this.state.shoppingBagItems1.length
 
         
         if (!destination) {
@@ -109,22 +109,22 @@ class DragAndDropRBD extends Component {
         switch (destination.droppableId) {
             case "BAG1":
                 if (this.state.shoppingBagItems1.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems1, source, destination)
+                    copy(COLLECTION, this.state.shoppingBagItems1, source, dest)
                 break;
 
             case "BAG2":
                 if (this.state.shoppingBagItems2.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems2, source, destination)
+                    copy(COLLECTION, this.state.shoppingBagItems2, source, dest)
                 break;
 
             case "BAG3":
-                if (this.state.shoppingBagItems2.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems3, source, destination)
+                if (this.state.shoppingBagItems3.length < 3)
+                    copy(COLLECTION, this.state.shoppingBagItems3, source, dest)
                 break;
 
             case "BAG4":
-                if (this.state.shoppingBagItems2.length < 3)
-                    copy(COLLECTION, this.state.shoppingBagItems4, source, destination)
+                if (this.state.shoppingBagItems4.length < 3)
+                    copy(COLLECTION, this.state.shoppingBagItems4, source, dest)
                 break;
             default:
                 break;
