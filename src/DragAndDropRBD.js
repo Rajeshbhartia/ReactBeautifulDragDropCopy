@@ -94,6 +94,7 @@ class DragAndDropRBD extends Component {
         shoppingBagItems3: [],
         shoppingBagItems4: [],
     }
+    
     onDragEnd = (result) => {
         const { source, destination } = result;
         console.log(this.state.shoppingBagItems1.length, destination)
