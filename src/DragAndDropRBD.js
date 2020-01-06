@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { v4 as uuid } from "uuid";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import "./App.scss";
-import FtText from "./FtText";
+import Dialog from './Dialog';
+// import FtText from "./FtText";
 
 
 const COLLECTION = [
@@ -30,7 +31,7 @@ const copy = (source, destination, droppableSource, droppableDestination) => {
 
 function Copyable(props) {
     return (
-        <Droppable droppableId={props.droppableId} isDropDisabled={true}>
+        <Droppable droppableId={props.droppableId} isDropDisabled={true} className="">
             {(provided, snapshot) => (
                 <div ref={provided.innerRef} className={props.className}>
                     {props.items.map((item, index) => (
@@ -47,11 +48,12 @@ function Copyable(props) {
                                         {item.label}
                                     </div>
                                     {snapshot.isDragging && (
-                                        <div className="fw-single-box react-beatiful-dnd-copy">{item.label}</div>
+                                        <div className="fw-single-box react-beatiful-dnd-copy fw-dragging">{item.label}</div>
                                     )}
                                 </React.Fragment>
                             )}
                         </Draggable>
+
                     ))}
                     {provided.placeholder}
                 </div>
@@ -81,9 +83,25 @@ function ShoppingBag(props) {
                                     style={provided.draggableProps.style}
                                     className="fw-box2-single-content"
                                 >
-                                    <FtText label={item.label} />
-                                    {/* {item.label} */}
-                                    {/* <input placeholder="item.label" /> */}
+                                    <div className="fw-box2-icon-wrapper">
+                                        <i class="material-icons">
+                                            settings_applications
+                                        </i>
+                                        <i class="material-icons">
+                                            visibility
+                                        </i>
+                                        <i class="material-icons">
+                                            delete
+                                        </i>
+                                    </div>
+                                    <div className="fw-box2-single-content-header">
+                                        {/* <FtText label={item.label} /> */}
+                                        {item.label}
+                                    </div>
+                                    <div className="fw-box2-single-content-subheader">
+                                        Hello 123
+                                    </div>
+                                    <div className="fw-box2-line" />
                                 </div>
                             )}
                         </Draggable>
@@ -100,9 +118,10 @@ class DragAndDropRBD extends Component {
 
     state = {
         shoppingBagItems1: [],
-        shoppingBagItems2: [],
-        shoppingBagItems3: [],
-        shoppingBagItems4: [],
+        // shoppingBagItems2: [],
+        // shoppingBagItems3: [],
+        // shoppingBagItems4: [],
+        isDialogOpen: false
     }
 
     onDragEnd = (result) => {
@@ -112,7 +131,7 @@ class DragAndDropRBD extends Component {
         let dest = { ...destination }
         dest.index = this.state.shoppingBagItems1.length
 
-
+        
         if (!destination) {
             return;
         }
@@ -120,24 +139,24 @@ class DragAndDropRBD extends Component {
         if (source.droppableId === "SHOP") {
             switch (destination.droppableId) {
                 case "BAG1":
-                    if (this.state.shoppingBagItems1.length < 3)
-                        copy(COLLECTION, this.state.shoppingBagItems1, source, destination)
+                    // if (this.state.shoppingBagItems1.length < 3)
+                    copy(COLLECTION, this.state.shoppingBagItems1, source, destination)
                     break;
 
-                case "BAG2":
-                    if (this.state.shoppingBagItems2.length < 3)
-                        copy(COLLECTION, this.state.shoppingBagItems2, source, destination)
-                    break;
+                // case "BAG2":
+                //     if (this.state.shoppingBagItems2.length < 3)
+                //         copy(COLLECTION, this.state.shoppingBagItems2, source, destination)
+                //     break;
 
-                case "BAG3":
-                    if (this.state.shoppingBagItems3.length < 3)
-                        copy(COLLECTION, this.state.shoppingBagItems3, source, destination)
-                    break;
+                // case "BAG3":
+                //     if (this.state.shoppingBagItems3.length < 3)
+                //         copy(COLLECTION, this.state.shoppingBagItems3, source, destination)
+                //     break;
 
-                case "BAG4":
-                    if (this.state.shoppingBagItems4.length < 3)
-                        copy(COLLECTION, this.state.shoppingBagItems4, source, destination)
-                    break;
+                // case "BAG4":
+                //     if (this.state.shoppingBagItems4.length < 3)
+                //         copy(COLLECTION, this.state.shoppingBagItems4, source, destination)
+                //     break;
                 default:
                     break;
             }
@@ -148,21 +167,21 @@ class DragAndDropRBD extends Component {
                     reorder(this.state.shoppingBagItems1, source.index, destination.index)
                     break;
 
-                case "BAG2":
-                    reorder(this.state.shoppingBagItems2, source.index, destination.index)
-                    break;
+                // case "BAG2":
+                //     reorder(this.state.shoppingBagItems2, source.index, destination.index)
+                //     break;
 
-                case "BAG3":
-                    reorder(this.state.shoppingBagItems3, source.index, destination.index)
-                    break;
+                // case "BAG3":
+                //     reorder(this.state.shoppingBagItems3, source.index, destination.index)
+                //     break;
 
-                case "BAG4":
-                    reorder(this.state.shoppingBagItems4, source.index, destination.index)
-                    break;
+                // case "BAG4":
+                //     reorder(this.state.shoppingBagItems4, source.index, destination.index)
+                //     break;
                 default:
                     break;
             }
-        }else{
+        } else {
             console.log(source, destination)
 
         }
@@ -198,15 +217,16 @@ class DragAndDropRBD extends Component {
                             </span>
                         </div>
                         {/* <div className="fw-box2-content-wrapper"> */}
-                        <div style={{ display: 'flex', height: "100%", width: "100%", flexDirection: 'column', }}>
+                        <div style={{ display: 'flex', height: "600px", width: "700px", overflow: 'auto', }}>
                             <ShoppingBag items={this.state.shoppingBagItems1} id="BAG1" />
-                            <ShoppingBag items={this.state.shoppingBagItems2} id="BAG2" />
-                            <ShoppingBag items={this.state.shoppingBagItems3} id="BAG3" />
-                            <ShoppingBag items={this.state.shoppingBagItems4} id="BAG4" />
+                            {/* <ShoppingBag items={this.state.shoppingBagItems2} id="BAG2" /> */}
+                            {/* <ShoppingBag items={this.state.shoppingBagItems3} id="BAG3" /> */}
+                            {/* <ShoppingBag items={this.state.shoppingBagItems4} id="BAG4" /> */}
                         </div>
                         {/* </div> */}
                     </div>
                 </DragDropContext>
+                {this.state.isDialogOpen && <Dialog />}
             </div>
         );
     }
