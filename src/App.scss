@@ -49,16 +49,13 @@
               box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14);
           }
           .fw-single-box.dragging{
-            background-color: red
+            color: #4169E1
             }
       }
   }
   .fw-box2{
-    //   height: 618px;
-    //   width: 709px;
       float: left;
       padding: 16px;
-      
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
       
       .fw-box2-title-wrapper{
@@ -73,18 +70,11 @@
       }
       .fw-box2-content-wrapper{
          flex: 1;
-        //  height: 90px;
-        //  width: 100%;
-        //  border: 1px solid gainsboro;
           .fw-box2-single-content{
-            //   width: 205px;
-            //   float: left;
-            //   margin-right: 24px;
               padding: 8px;
               height: 70px;
               margin: 8px;
               background-color: #F8F8F8;
-            //   border-bottom: 1px solid #E2E2E2;
               margin-bottom: 16px;
               .fw-box2-line{
                 width: 100%;
@@ -92,7 +82,6 @@
                 background-color: #E2E2E2;
                 margin-top:8px;
               }
-            //   border: 1px solid rgb(192, 192, 192)
           }
       }
   }
@@ -102,19 +91,19 @@
 }
 
 
-.fw-background-red{
-    background-color: red
-}
-.fw-background-green{
-    background-color: green
-}
-.fw-dragging-start{
-    border: 1px solid red
-}
+// .fw-background-red{
+//     background-color: red
+// }
+// .fw-background-green{
+//     background-color: green
+// }
+// .fw-dragging-start{
+//     border: 1px solid red
+// }
 
-.fw-dragging{
-    background-color: red
-}
+// .fw-dragging{
+//     background-color: red
+// }
 
 .fw-box2-icon-wrapper{
     float: right;
@@ -142,3 +131,14 @@
 .fw-box2-single-content-subheader{
     font-size: 14px;    
 }
+
+
+
+//extra
+.mdc-dialog{
+   @include mdc-dialog-min-width(450px)
+}
+.fw-text-input {
+    margin-bottom: 8px;
+    width: 100%;
+  }
