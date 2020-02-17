@@ -28,8 +28,8 @@ class App extends Component {
   render() {
     return (
       <div id="demo">
-        <DragAndDropRBD />
-        {/* hello */}
+        {/* <DragAndDropRBD /> */}
+        hello
 
       </div>
     );
