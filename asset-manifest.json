@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/css/main.984b7ab9.chunk.css",
-    "main.js": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/main.e7261bf2.chunk.js",
-    "main.js.map": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/main.e7261bf2.chunk.js.map",
-    "runtime-main.js": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/runtime-main.ad5e50c4.js",
-    "runtime-main.js.map": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/runtime-main.ad5e50c4.js.map",
-    "static/js/2.0f3c886c.chunk.js": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/2.0f3c886c.chunk.js",
-    "static/js/2.0f3c886c.chunk.js.map": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/2.0f3c886c.chunk.js.map",
-    "index.html": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/index.html",
-    "precache-manifest.cfdc17a2b69a929040e0ab0b408c76b1.js": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/precache-manifest.cfdc17a2b69a929040e0ab0b408c76b1.js",
-    "service-worker.js": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/service-worker.js",
-    "static/css/main.984b7ab9.chunk.css.map": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/css/main.984b7ab9.chunk.css.map",
-    "static/js/2.0f3c886c.chunk.js.LICENSE": "/Rajeshbhartia/ReactBeautifulDragDropCopy.git/static/js/2.0f3c886c.chunk.js.LICENSE"
+    "main.css": "/ReactBeautifulDragDropCopy.git/static/css/main.6e3e3345.chunk.css",
+    "main.js": "/ReactBeautifulDragDropCopy.git/static/js/main.444ec347.chunk.js",
+    "main.js.map": "/ReactBeautifulDragDropCopy.git/static/js/main.444ec347.chunk.js.map",
+    "runtime-main.js": "/ReactBeautifulDragDropCopy.git/static/js/runtime-main.32fbacef.js",
+    "runtime-main.js.map": "/ReactBeautifulDragDropCopy.git/static/js/runtime-main.32fbacef.js.map",
+    "static/js/2.9b510869.chunk.js": "/ReactBeautifulDragDropCopy.git/static/js/2.9b510869.chunk.js",
+    "static/js/2.9b510869.chunk.js.map": "/ReactBeautifulDragDropCopy.git/static/js/2.9b510869.chunk.js.map",
+    "index.html": "/ReactBeautifulDragDropCopy.git/index.html",
+    "precache-manifest.b8eb94205833bbec68e591f41f9d9929.js": "/ReactBeautifulDragDropCopy.git/precache-manifest.b8eb94205833bbec68e591f41f9d9929.js",
+    "service-worker.js": "/ReactBeautifulDragDropCopy.git/service-worker.js",
+    "static/css/main.6e3e3345.chunk.css.map": "/ReactBeautifulDragDropCopy.git/static/css/main.6e3e3345.chunk.css.map",
+    "static/js/2.9b510869.chunk.js.LICENSE": "/ReactBeautifulDragDropCopy.git/static/js/2.9b510869.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad5e50c4.js",
-    "static/js/2.0f3c886c.chunk.js",
-    "static/css/main.984b7ab9.chunk.css",
-    "static/js/main.e7261bf2.chunk.js"
+    "static/js/runtime-main.32fbacef.js",
+    "static/js/2.9b510869.chunk.js",
+    "static/css/main.6e3e3345.chunk.css",
+    "static/js/main.444ec347.chunk.js"
   ]
 }
