@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/ReactBeautifulDragDropCopy.git/static/css/main.6e3e3345.chunk.css",
-    "main.js": "/ReactBeautifulDragDropCopy.git/static/js/main.444ec347.chunk.js",
-    "main.js.map": "/ReactBeautifulDragDropCopy.git/static/js/main.444ec347.chunk.js.map",
-    "runtime-main.js": "/ReactBeautifulDragDropCopy.git/static/js/runtime-main.32fbacef.js",
-    "runtime-main.js.map": "/ReactBeautifulDragDropCopy.git/static/js/runtime-main.32fbacef.js.map",
-    "static/js/2.9b510869.chunk.js": "/ReactBeautifulDragDropCopy.git/static/js/2.9b510869.chunk.js",
-    "static/js/2.9b510869.chunk.js.map": "/ReactBeautifulDragDropCopy.git/static/js/2.9b510869.chunk.js.map",
-    "index.html": "/ReactBeautifulDragDropCopy.git/index.html",
-    "precache-manifest.b8eb94205833bbec68e591f41f9d9929.js": "/ReactBeautifulDragDropCopy.git/precache-manifest.b8eb94205833bbec68e591f41f9d9929.js",
-    "service-worker.js": "/ReactBeautifulDragDropCopy.git/service-worker.js",
-    "static/css/main.6e3e3345.chunk.css.map": "/ReactBeautifulDragDropCopy.git/static/css/main.6e3e3345.chunk.css.map",
-    "static/js/2.9b510869.chunk.js.LICENSE": "/ReactBeautifulDragDropCopy.git/static/js/2.9b510869.chunk.js.LICENSE"
+    "main.css": "/ReactBeautifulDragDropCopy/static/css/main.6e3e3345.chunk.css",
+    "main.js": "/ReactBeautifulDragDropCopy/static/js/main.444ec347.chunk.js",
+    "main.js.map": "/ReactBeautifulDragDropCopy/static/js/main.444ec347.chunk.js.map",
+    "runtime-main.js": "/ReactBeautifulDragDropCopy/static/js/runtime-main.b4ae4146.js",
+    "runtime-main.js.map": "/ReactBeautifulDragDropCopy/static/js/runtime-main.b4ae4146.js.map",
+    "static/js/2.9b510869.chunk.js": "/ReactBeautifulDragDropCopy/static/js/2.9b510869.chunk.js",
+    "static/js/2.9b510869.chunk.js.map": "/ReactBeautifulDragDropCopy/static/js/2.9b510869.chunk.js.map",
+    "index.html": "/ReactBeautifulDragDropCopy/index.html",
+    "precache-manifest.8ddfb2d19169f7c083ae488097f08241.js": "/ReactBeautifulDragDropCopy/precache-manifest.8ddfb2d19169f7c083ae488097f08241.js",
+    "service-worker.js": "/ReactBeautifulDragDropCopy/service-worker.js",
+    "static/css/main.6e3e3345.chunk.css.map": "/ReactBeautifulDragDropCopy/static/css/main.6e3e3345.chunk.css.map",
+    "static/js/2.9b510869.chunk.js.LICENSE": "/ReactBeautifulDragDropCopy/static/js/2.9b510869.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.32fbacef.js",
+    "static/js/runtime-main.b4ae4146.js",
     "static/js/2.9b510869.chunk.js",
     "static/css/main.6e3e3345.chunk.css",
     "static/js/main.444ec347.chunk.js"
