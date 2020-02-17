@@ -1,9 +1,3 @@
-/* Material for Input field  */
-@import "@material/floating-label/mdc-floating-label";
-@import "@material/textfield/mdc-text-field";
-@import "@material/dialog/mdc-dialog";
-@import "@material/button/mdc-button";
-
 .fw-json-form-wrapper{
   .fw-json-form-title{
       margin-top: 12px;
@@ -91,20 +85,6 @@
 }
 
 
-// .fw-background-red{
-//     background-color: red
-// }
-// .fw-background-green{
-//     background-color: green
-// }
-// .fw-dragging-start{
-//     border: 1px solid red
-// }
-
-// .fw-dragging{
-//     background-color: red
-// }
-
 .fw-box2-icon-wrapper{
     float: right;
     opacity: 0;
@@ -132,13 +112,3 @@
     font-size: 14px;    
 }
 
-
-
-//extra
-.mdc-dialog{
-   @include mdc-dialog-min-width(450px)
-}
-.fw-text-input {
-    margin-bottom: 8px;
-    width: 100%;
-  }
