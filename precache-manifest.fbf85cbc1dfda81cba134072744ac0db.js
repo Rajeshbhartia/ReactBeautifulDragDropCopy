@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fecb27711c37f198bce12fddfa9bfb1e",
+    "revision": "62bb92ab10ced6f246106caef902bd6f",
     "url": "/ReactBeautifulDragDropCopy/index.html"
   },
   {
-    "revision": "b2e1a541305776c0bb47",
+    "revision": "a0c9c36264e958131f08",
     "url": "/ReactBeautifulDragDropCopy/static/css/main.6e3e3345.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactBeautifulDragDropCopy/static/js/2.9b510869.chunk.js.LICENSE"
   },
   {
-    "revision": "b2e1a541305776c0bb47",
-    "url": "/ReactBeautifulDragDropCopy/static/js/main.444ec347.chunk.js"
+    "revision": "a0c9c36264e958131f08",
+    "url": "/ReactBeautifulDragDropCopy/static/js/main.b73bc571.chunk.js"
   },
   {
     "revision": "8c7f7b7b2a0a9dd4d846",
